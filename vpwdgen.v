@@ -25,11 +25,11 @@ fn main() {
 
 	// get the word list
 	if file_name != "" {
-		words << os.read_lines(file_name) or {
+		words = os.read_lines(file_name) or {
 			exit(1)
 		}
 	} else {
-			words << internal_word_list()
+			words = internal_word_list()
 	}
 
 	mut pwords := []string{}
